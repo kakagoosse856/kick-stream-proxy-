@@ -1,8 +1,13 @@
 {
   "name": "Kick Stream Proxy (Python)",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
   "postCreateCommand": "pip install -r requirements.txt",
+
+  "postStartCommand": "python main.py",
+
   "forwardPorts": [8000],
+
   "portsAttributes": {
     "8000": {
       "label": "Kick Stream Proxy",
