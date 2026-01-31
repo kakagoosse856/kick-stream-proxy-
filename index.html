@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Kick Stream Player</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+  body { margin:0; background:black; display:flex; justify-content:center; align-items:center; height:100vh; }
+  video { width:90%; max-width:800px; }
+</style>
+</head>
+<body>
+<video id="video" controls></video>
+
+<script>
+const video = document.getElementById('video');
+const m3u8Url = "kick_final.m3u8"; // الرابط داخل الريبو
+
+if(Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(m3u8Url);
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(() => console.log("اضغط تشغيل يدوياً"));
+    });
+} else if(video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = m3u8Url;
+    video.addEventListener('loadedmetadata', () => video.play());
+} else {
+    alert("المتصفح لا يدعم HLS");
+}
+</script>
+</body>
+</html>
