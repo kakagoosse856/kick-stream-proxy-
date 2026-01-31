@@ -1,18 +1,9 @@
-# 🎥 Kick Stream Proxy – Python
+# 🚀 Kick Stream Proxy Auto (Python Version)
 
-بروكسي بث مباشر لقنوات **Kick** باستخدام Python و FastAPI  
-❌ لا Node.js  
-❌ لا npm  
-✅ يعمل من GitHub عبر Codespaces
+نسخة Python لبروكسي بث **Kick** بدون Node.js أو npm.  
+يمكنك استخراج رابط `.m3u8` للبث المباشر تلقائيًا وتشغيله مباشرة.
 
 ---
 
-## 🚀 التشغيل (بزر واحد)
+## 🗂️ هيكل المشروع
 
-1. اضغط الزر التالي 👇  
-[![Run in Codespaces](https://github.com/codespaces/badge.svg)](../../codespaces/new)
-
-2. انتظر حتى يفتح Codespaces
-3. في الـ Terminal اكتب:
-```bash
-python main.py
