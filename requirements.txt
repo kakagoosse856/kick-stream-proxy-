@@ -1,4 +1,4 @@
 fastapi
-uvicorn
 httpx
-streamlink
+uvicorn
+m3u8
